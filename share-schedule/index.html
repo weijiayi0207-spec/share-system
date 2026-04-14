@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>共享管理系统</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="login" class="login">
+    <div class="box">
+      <h3>密码登录</h3>
+      <input type="password" id="p">
+      <button onclick="login()">登录</button>
+    </div>
+  </div>
+
+  <div id="app" style="display:none">
+    <div class="top">❤️ 相识第 <span id="day">0</span> 天</div>
+
+    <div id="home" class="page show">
+      <div class="menu">
+        <button onclick="go('schedule')">📅 日程</button>
+        <button onclick="go('items')">📦 在库</button>
+        <button onclick="go('wait')">📥 待收货</button>
+        <button onclick="go('preout')">🚛 出货预定</button>
+        <button onclick="go('out')">📜 出货记录</button>
+      </div>
+    </div>
+
+    <div id="schedule" class="page">
+      <h3>📅 共享日程</h3>
+      <input id="sc" placeholder="内容">
+      <button onclick="addSc()">添加</button>
+      <div id="sclist" class="list"></div>
+      <button class="back" onclick="go('home')">返回</button>
+    </div>
+
+    <div id="items" class="page">
+      <h3>📦 在库物品</h3>
+      <input id="inname" placeholder="物品名">
+      <input type="datetime-local" id="intime">
+      <input id="inprice" placeholder="価格">
+      <select id="incate">
+        <option>微信</option>
+        <option>QQ</option>
+        <option>小红书</option>
+        <option>メルカリ</option>
+        <option>ジモティー</option>
+      </select>
+      <button onclick="addItem()">添加</button>
+      <div id="itemlist" class="list"></div>
+      <button class="back" onclick="go('home')">返回</button>
+    </div>
+
+    <div id="wait" class="page">
+      <h3>📥 待收货</h3>
+      <input id="wname" placeholder="物品名">
+      <input type="datetime-local" id="wtime">
+      <input id="waddr" placeholder="住所">
+      <input id="wprice" placeholder="価格">
+      <select id="wcate">
+        <option>微信</option>
+        <option>QQ</option>
+        <option>小红书</option>
+        <option>メルカリ</option>
+        <option>ジモティー</option>
+      </select>
+      <button onclick="addWait()">添加待收货</button>
+      <div id="wlist" class="list"></div>
+      <button class="back" onclick="go('home')">返回</button>
+    </div>
+
+    <div id="preout" class="page">
+      <h3>🚛 出货预定</h3>
+      <input id="pname" placeholder="物品名">
+      <input type="datetime-local" id="ptime">
+      <input id="paddr" placeholder="住所">
+      <input id="pprice" placeholder="価格">
+      <input id="premark" placeholder="備考">
+      <button onclick="addPreOut()">添加预定</button>
+      <div id="plist" class="list"></div>
+      <button class="back" onclick="go('home')">返回</button>
+    </div>
+
+    <div id="out" class="page">
+      <h3>📜 出货记录</h3>
+      <div id="outlist" class="list"></div>
+      <button class="back" onclick="go('home')">返回</button>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
