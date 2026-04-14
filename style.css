@@ -1,0 +1,15 @@
+body{font-family:Arial;background:#fff6fc;margin:0;padding:10px;max-width:600px;margin:0 auto;font-size:13px;color:#444}
+.login{position:fixed;inset:0;background:#0000004d;display:flex;align-items:center;justify-content:center;z-index:999}
+.box{background:#fff;padding:25px;border-radius:16px;width:280px;text-align:center}
+input,select,button{width:100%;margin:4px 0;padding:8px;border-radius:10px;border:1px solid #eee;outline:none}
+button{background:#e84393;color:#fff;font-weight:bold;cursor:pointer}
+.back{background:#f0f0f0;color:#666}
+.top{background:#fce4ec;color:#e84393;padding:10px;border-radius:12px;text-align:center;margin-bottom:10px}
+.page{display:none}
+.show{display:block}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.list{margin-top:10px;max-height:350px;overflow-y:auto}
+.item{background:#fff;padding:10px;border-radius:10px;margin:5px 0}
+.opt{display:flex;gap:5px;margin-top:5px}
+.opt button{padding:6px;font-size:12px}
+h3{color:#e84393;margin:5px 0}
